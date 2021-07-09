@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="main-container conainer image-bg">
+    <div class="main-content">
+        <div class="what-app-logo d-flex justify-content-center">
+            <i class="fab fa-whatsapp fa-9x text-center" id="wp-logo"></i>
+        </div>
+        <div class="mt-4">
+            <h1 class="h1 text-center text-uppercase text-muted">ContactGain</h1>
+            <h1 class="h5 text-center text-muted">Get more contact to increase your <b>Network</b></h1>
+        </div>
+        <div class="mt-5 d-flex justify-content-center">
+            <a href="{% url 'contact_form' %}" id="contactBtn">Gain More Contacts</a>
+        </div>
+        <div class="share d-flex justify-content-center mt-5">
+            <div class="share-content">
+                <small class="text-muted text-center">Follow Us</small>
+                <div>
+                    <a href=""><i class="fab fa-whatsapp text-muted fa-2x mx-2"></i></a>
+                    <a href=""><i class="fab fa-instagram text-muted fa-2x mx-2"></i></a>
+                    <a href=""><i class="fab fa-telegram text-muted fa-2x mx-2"></i></a>
+                    <a href=""><i class="fab fa-facebook text-muted fa-2x mx-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

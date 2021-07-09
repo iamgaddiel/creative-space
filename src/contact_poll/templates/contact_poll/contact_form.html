@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="main-wrapper">
+    <section class="alert-modal aniamte__animated animate__fadeZoomIn">
+        <div id="alertModel">
+            <div class="alertModalContent d-flex-justify-content-center">
+                <div class="modal-logo d-flex justify-content-center mb=3">
+                    <i class="fab fa-slideshare text-muted fa-6x"></i>
+                </div>
+                <button type="button" class="btn-close" aria-label="Close" id="closeModal"></button>
+                <p class="modal-text text-center">Thank you for signing up to our service</p>
+                <p class="modal-text text-center">Kindly share to someone on WhatsApp, your contact will be sent your email immediately</p>
+                <button id="shareBtn" class="w-100 mx-auto text-dark"">
+                    <b>Share</b>
+                    <i class="fa fa-link"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="main-container conainer image-bg pb-5">
+        <div class="from-wrapper" id="contactForm">
+            <form action="{% url 'contact_form' %}" method="post" class="pt-5">
+                {% csrf_token %}
+                <div class="input-control">
+                    <label for=""><small class="text-light ml-4">First Name</small></label>
+                    <input type="text" name="first_name" id="" placeholder="First Name" required>
+                </div>
+                <div class="input-control">
+                    <label for=""><small class="text-light ml-4">Last Name</small></label>
+                    <input type="text" name="last_name" id="" placeholder="Last Name" required>
+                </div>
+                <div class="input-control">
+                    <label for=""><small class="text-light ml-4">Email</small></label>
+                    <input type="email" name="email" id="" placeholder="Email" required>
+                </div>
+                <div class="input-control">
+                    <label for=""><small class="text-light ml-4">Your state</small></label>
+                    <input type="text" name="state" id="" placeholder="Your state" required>
+                </div>
+                <div class="input-control">
+                    <label for=""><small class="text-light ml-4">Occupation</small></label>
+                    <input type="text" name="occupation" id="" placeholder="Occupation" required>
+                </div>
+                <div class="input-control">
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock content %}

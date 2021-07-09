@@ -1,0 +1,4 @@
+src/db.sqlite3
+src/env.json
+.vscode/tasks.json
+startSever.sh
